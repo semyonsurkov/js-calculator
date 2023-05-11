@@ -82,3 +82,11 @@ button:active {
   transform: scale(1.1);
   background-color: rgb(80, 75, 75);
 }
+
+.buttons button:nth-of-type(4n) {
+  background-color: orange;
+}
+
+.buttons button:nth-of-type(-n + 3) {
+  background-color: gray;
+}

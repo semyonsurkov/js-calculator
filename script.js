@@ -28,11 +28,14 @@ const operate = (operator, firstNumber, secondNumber) => {
     case '-':
       return parseFloat(firstNumber) - parseFloat(secondNumber);
       break;
-    case '*':
+    case 'Х':
       return parseFloat(firstNumber) * parseFloat(secondNumber);
       break;
     case '/':
       return parseFloat(firstNumber) / parseFloat(secondNumber);
+      break;
+    case '%':
+      return parseFloat(firstNumber) % parseFloat(secondNumber);
       break;
   }
 };
@@ -48,10 +51,8 @@ numberButtons.forEach((button) => {
         firstNumber += button.value;
       }
     } else {
-      if (!secondNumber && firstNumber) {
+      if (!secondNumber) {
         secondNumber = button.value;
-      } else if (secondNumber && firstNumber) {
-        return;
       } else {
         secondNumber += button.value;
       }
@@ -66,7 +67,7 @@ operatorsButtons.forEach((operatorButton) => {
   operatorButton.addEventListener('click', () => {
     if (firstNumber && !operator) {
       operator = operatorButton.value;
-      updateDisplay(operator);
+      updateDisplay(' ' + operator + ' ');
     }
   });
 });
@@ -76,6 +77,14 @@ function updateDisplay(value) {
   const screenCurrent = document.querySelector('.screen-current');
   screenCurrent.textContent = displayValue;
 }
+
+const backspaceButton = document.querySelector('#btn-backspace');
+
+backspaceButton.addEventListener('click', () => {
+  displayValue = displayValue.slice(0, -1);
+  const screenCurrent = document.querySelector('.screen-current');
+  screenCurrent.textContent = displayValue;
+});
 
 const resetButton = document.querySelector('.btn-clear');
 
