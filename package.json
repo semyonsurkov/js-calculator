@@ -1,0 +1,14 @@
+{
+  "name": "project-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:semyonsurkov/odin-calculator.git",
+  "author": "Semyon Surkov <semyonsurkov@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vite": "^4.3.5"
+  },
+  "scripts": {
+    "dev": "vite"
+  }
+}
