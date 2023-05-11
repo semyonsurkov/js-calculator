@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
 }
 
 .calculator {
   border-radius: 15px;
+  padding: 10px;
 }
 
 .screen-container {
@@ -20,7 +27,8 @@
   box-sizing: border-box;
   word-wrap: break-word;
   font-size: 32px;
-  border-radius: 15px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .calculator {
@@ -35,7 +43,7 @@
   width: 350px;
   display: flex;
   flex-wrap: wrap;
-  gap: 23px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -49,11 +57,13 @@ button {
   border-radius: 70px;
   justify-content: center;
   align-items: center;
-  padding: 25px;
-  width: 65px;
+  padding: 20px;
+  width: 70px;
   background-color: rgb(53, 53, 53);
   color: white;
   transition: transform 0.2s ease-out;
+  box-sizing: border-box;
+  font-size: 24px;
 }
 
 @keyframes myAnim {
